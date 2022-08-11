@@ -4,7 +4,4 @@ import './App.css';
 
 
 
-
-export class App extends Component {
- 
-}
+const app
