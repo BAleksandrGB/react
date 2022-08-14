@@ -1,7 +1,29 @@
-import logo from './logo.svg';
-import React, {Component} from 'react'
+
+import React, { useState } from 'react'
+import { Counter } from './components/Counter'
+import { Massage } from './components/Massage'
 import './App.css';
 
 
 
-const app
+const App = () => {
+    const  [messageList, setMessageList]  = useState([])
+
+    const initMassageList = (value) => {
+        setMessageList((messageList) => (
+            { text: value, author: '' }
+        ))
+
+        console.log(messageList);
+
+
+    }
+    return (
+        <>
+            <Massage msList={initMassageList} />
+            <Counter />
+        </>
+    )
+}
+
+export default App
