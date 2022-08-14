@@ -1,15 +1,105 @@
+
+.chat{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.8fr;
+  justify-content: center;
+  align-items: center;
+  background: url('https://pixelbox.ru/wp-content/uploads/2021/09/background-chat-vk-75.jpg'), #d4f2fb9e;
+  animation: anim 100s infinite forwards;
+  
+  background-blend-mode: color;
+  color: #232323;
+  box-sizing: border-box;
+
+}
+@keyframes anim {
+  from{background-position-x: 0%;background-position-y: 0%;}
+  50%{background-position-x: 100%;background-position-y: 50%;}
+  to{background-position-x: 0%;background-position-y: 0%;}
+}
+
+
+.listMassage{
+  width: 100%;
+  height: 80vh;
+  border-radius: 10px;
+display: flex;
+flex-direction: column;
+border: 3px solid #232323;
+background: url('https://phonoteka.org/uploads/posts/2022-01/1643007787_8-phonoteka-org-p-poluprozrachnii-belii-fon-9.png')rgba(5, 131, 241, 0.789);
+animation: anim2 200s linear infinite forwards;
+color: black;
+box-sizing: border-box;
+overflow-y: scroll;
+}
+
+@keyframes anim2 {
+  from{background-position-y: 0%;}
+  50%{background-position-y: 500%;}
+  to{background-position-y: 0%;}
+}
+
+.form{
+  height: 100%;
+  display: grid;
+  border: 3px solid #232323;
+  grid-template-columns: 1.7fr .3fr;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: url('https://ph-files.imgix.net/8a91c94c-a725-41fc-b65a-69237c6b12f2.png?auto=format&fit=crop&frame=1&h=512&w=1024'),rgba(255, 255, 255, 0.451);
+  background-blend-mode: color;
+  padding: 20px;
+  gap: 10px;
+}
+
+.form > input{
+  height: 50px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #ffffff78;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px black;
+  border: none;
+}
+
+.massag,.BOT{
+  
+  box-sizing: border-box;
+  margin:  20px 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: antiquewhite;
+}
+.BOT {
+  display: flex;
+justify-content: flex-end;
+}
+.BOT > .text{
+  background-color: rgb(147, 8, 8);
+  color: aliceblue;
+}
+
+
 .btn{
-  background-color: burlywood;
-  margin-top: 60px;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
+  background-color: #ffffff78;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px black;
 }
 .btn:hover{
   cursor: pointer;
-  background-color: beige;
-}
-p{
-  margin-top: 10px;
+  background-color: #ffffffbe;
 }
 

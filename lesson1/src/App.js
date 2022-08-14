@@ -1,28 +1,55 @@
 
-import React, { useState } from 'react'
-import { Counter } from './components/Counter'
-import { Massage } from './components/Massage'
+import React, { useEffect, useState } from 'react';
+import { Form } from './components/Form';
+import { Massages } from './components/Massages';
+import { AUTHOR,BOT } from './components/bd';
 import './App.css';
 
-
+let timer;
 
 const App = () => {
-    const  [messageList, setMessageList]  = useState([])
+    const [massageList, setMassagList] = useState([])
 
-    const initMassageList = (value) => {
-        setMessageList((messageList) => (
-            { text: value, author: '' }
+    useEffect((author)=>{
+        if(massageList[massageList.length-1]?.author === AUTHOR){
+
+            clearTimeout(timer)
+            timer = setTimeout(() => {
+                setMassagList((prevList)=>([
+                    ...prevList,
+                    {
+                        author: BOT,
+                        text:'Привет я робот.И пока ничего не умею! ;0)',
+                        id: 'bot'+ prevList.length
+                    }
+                ]))
+            }, 1500);
+        }
+
+        return ()=>{
+            clearTimeout(timer)
+        }
+    },[massageList])
+
+    const handlerSendMassage = (msg) => {
+        setMassagList((prevList) => (
+            [
+                ...prevList,
+                {
+                    author: AUTHOR,
+                    text: msg,
+                    id: prevList.length
+                },
+            ]
         ))
-
-        console.log(messageList);
-
-
     }
+
+
     return (
-        <>
-            <Massage msList={initMassageList} />
-            <Counter />
-        </>
+        <div className="chat">
+            <Massages massageList={massageList} />
+            <Form onSendMassag={handlerSendMassage} />
+        </div>
     )
 }
 

@@ -1,32 +1,14 @@
-import React, { useState, Component } from "react";
+import React from "react";
+import { AUTHOR,BOT } from "./bd";
 
-export class Massage extends React.Component {
-    constructor(props) {
-        super(props)
-        this.msValue = ''
-        this.state = {
-            massage: '',
-            author: ''
-        }
-        this.render()
-    }
+export const Massage = ({ author, text,id }) => {
 
-    mass() {
-        this.setState({
-            massage: this.msValue,
-            author: ''
-        })
-    }
+    const authorType = author === AUTHOR ? AUTHOR : BOT
 
-
-
-    render() {
-        return (
-            <>
-                <input type="text" value={this.msValue} onChange={mass()} />
-                <button className="btnMass">Сообщение</button>
-            </>
-        )
-    }
-
+    return (
+        <div className={`massag ${authorType}`}>
+            <span className='text'><span>от:{authorType}</span>
+                <span>сообщение:{text}</span></span>
+        </div>
+    )
 }
