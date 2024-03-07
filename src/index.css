@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+
+
+
+.--h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{padding: 0;margin: 0;box-sizing: border-box;list-style-type: none;text-decoration: none;}
+
+
+
+.caveat-En {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
+.caveat-Rus {
+  font-family: 'Caveat-rus', cursive;
+}
+
+
+html{font-size: 10px;}
+
+body {
+  font-family:  Arial, sans-serif;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1920px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e2e0e0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0id2hpdGUiLz48L3N2Zz4='), auto;
+  transition: cursor .4s  ease-in-out;
+  
+}
+
+.--text{
+  color:#212121;
+}
+.--textHover:hover{
+  color: #FFB74D;
+}
+
+.--btn{
+  background-color: #827717;
+}
+
+.bcg1{
+  background-color: #FFFFFF;
+}
+
+.bcg2{
+  background-color: #FFE0B2;
+}
+
+
+
+

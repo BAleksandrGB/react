@@ -1,0 +1,20 @@
+.header {
+    position: "fixed";
+    top: 0;
+    left: 0;
+    max-width: 100vw;
+    width: 100%;
+    height: 80px;
+    background-color: #232323;
+}
+
+.logo{
+    padding: 12px 20px;
+    font-size: 2.2rem;
+    color: #232323;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
